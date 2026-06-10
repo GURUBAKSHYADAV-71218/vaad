@@ -1,13 +1,29 @@
+import SessionHeader from "../../components/live-session/SessionHeader";
+import VideoGrid from "../../components/live-session/VideoGrid";
+import TranscriptPanel from "../../components/live-session/TranscriptPanel";
+import AISignals from "../../components/live-session/AISignals";
+import Timeline from "../../components/live-session/Timeline";
+
 export default function LiveSessionPage() {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white">
-        Live Session
-      </h1>
 
-      <p className="text-slate-400 mt-2">
-        Discussion monitoring dashboard
-      </p>
+      <SessionHeader />
+
+      <VideoGrid />
+
+      <div className="grid grid-cols-2 gap-6 mt-6">
+
+        <TranscriptPanel />
+
+        <AISignals />
+
+      </div>
+
+      <div className="mt-6">
+        <Timeline />
+      </div>
+
     </div>
   );
 }
