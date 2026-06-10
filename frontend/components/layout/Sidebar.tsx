@@ -19,7 +19,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 min-h-screen bg-slate-900 border-r border-slate-800 p-5">
+    <aside className="w-72 min-h-screen bg-slate-900 border-r border-slate-800 p-5">
       <h1 className="text-2xl font-bold text-purple-400">
         VAAD
       </h1>
