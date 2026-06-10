@@ -2,6 +2,10 @@ import Sidebar from "../components/layout/Sidebar";
 import Topbar from "../components/layout/Topbar";
 import StatsCard from "../components/dashboard/StatsCard";
 
+// ✅ PHASE 12 IMPORTS ADDED HERE
+import RecentActivity from "../components/dashboard/RecentActivity";
+import UpcomingEvents from "../components/dashboard/UpcomingEvents";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -43,6 +47,12 @@ export default function Home() {
               title="Average Score"
               value="78"
             />
+          </div>
+
+          {/* ✅ PHASE 12 GRID ADDED EXACTLY BELOW STATS CARDS */}
+          <div className="grid grid-cols-2 gap-6 mt-8">
+            <RecentActivity />
+            <UpcomingEvents />
           </div>
 
         </section>
