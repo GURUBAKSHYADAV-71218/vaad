@@ -1,8 +1,16 @@
-export default function InvigilatorPanel() {
+export default function InvigilatorCard() {
   return (
-    <div className="border-2 border-dashed border-amber-300 bg-amber-50/50 p-5 rounded-xl">
-      <h3 className="text-lg font-bold text-amber-800">👨‍🏫 Invigilator Override Panel</h3>
-      <p className="text-xs text-gray-500 mt-1">Manual score overwrite, penalty logs, and final remarks entry.</p>
+    <div className="bg-slate-900 rounded-xl p-5">
+      <h2 className="text-xl font-bold mb-4">
+        Invigilator Review
+      </h2>
+
+      <div className="space-y-2">
+        <div>Communication: 16</div>
+        <div>Critical Thinking: 17</div>
+        <div>Leadership: 16</div>
+        <div>Participation: 14</div>
+      </div>
     </div>
   );
 }

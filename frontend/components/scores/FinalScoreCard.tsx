@@ -1,8 +1,17 @@
 export default function FinalScoreCard() {
   return (
-    <div className="border border-green-200 bg-green-50/30 p-6 rounded-xl shadow-sm">
-      <h2 className="text-xl font-bold text-green-700">🎯 Final Assessment Score</h2>
-      <p className="text-xs text-gray-600 mt-1">Weighted integration of AI analysis & manual approval.</p>
+    <div className="bg-purple-700 rounded-xl p-5">
+      <h2 className="text-xl font-bold mb-4">
+        Final Score
+      </h2>
+
+      <div className="text-5xl font-bold">
+        84
+      </div>
+
+      <p className="mt-3">
+        Approved by Invigilator
+      </p>
     </div>
   );
 }

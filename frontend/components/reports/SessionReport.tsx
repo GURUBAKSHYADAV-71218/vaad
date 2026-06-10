@@ -1,8 +1,31 @@
 export default function SessionReport() {
   return (
-    <div className="border border-gray-200 bg-white p-5 rounded-xl shadow-sm">
-      <h3 className="text-md font-semibold text-gray-700">📊 Comprehensive AI Evaluation Report</h3>
-      <p className="text-xs text-gray-500 mt-1">Strengths, Weaknesses, and actionable feedback generation loop.</p>
+    <div className="bg-slate-900 rounded-xl p-6">
+
+      <h2 className="text-xl font-bold mb-4">
+        Session Report
+      </h2>
+
+      <div className="space-y-2">
+
+        <div>
+          Topic: Climate Change
+        </div>
+
+        <div>
+          Duration: 20 Minutes
+        </div>
+
+        <div>
+          Participants: 6
+        </div>
+
+        <div>
+          Winner: Rahul
+        </div>
+
+      </div>
+
     </div>
   );
 }

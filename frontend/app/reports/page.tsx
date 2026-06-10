@@ -1,13 +1,17 @@
-export default function LiveSessionPage() {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold text-white">
-        Live Session
-      </h1>
+import SectionHeader from "../../components/layout/SectionHeader";
+import SessionReport from "../../components/reports/SessionReport";
 
-      <p className="text-slate-400 mt-2">
-        Discussion monitoring dashboard
-      </p>
+export default function ReportsPage() {
+  return (
+    <div className="space-y-6">
+      {/* Professional Section Header replaced old h1 */}
+      <SectionHeader
+        title="Reports"
+        subtitle="AI Generated Session Reports"
+      />
+
+      {/* Your Existing Session Report Card Components */}
+      <SessionReport />
     </div>
   );
 }
