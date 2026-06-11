@@ -1,13 +1,28 @@
-export default function LiveSessionPage() {
+import AIScoreCard from "../../components/scores/AIScoreCard";
+import FinalScoreCard from "../../components/scores/FinalScoreCard";
+import InvigilatorPanel from "../../components/scores/InvigilatorPanel";
+import ScoreTabs from "../../components/scores/ScoreTabs";
+
+export default function ScoresPage() {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white">
-        Live Session
+
+      <h1 className="text-3xl font-bold text-white mb-6">
+        Scores
       </h1>
 
-      <p className="text-slate-400 mt-2">
-        Discussion monitoring dashboard
-      </p>
+      <ScoreTabs />
+
+      <div className="grid grid-cols-3 gap-6 mt-6">
+
+        <AIScoreCard />
+
+        <InvigilatorPanel />
+
+        <FinalScoreCard />
+
+      </div>
+
     </div>
   );
 }

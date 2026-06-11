@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { name: "Dashboard", href: "/" },
+  { name: "Events", href: "/events" }, // 👈 ✅ PHASE 48: Events link added here perfectly!
   { name: "Live Session", href: "/live-session" },
   { name: "Scores", href: "/scores" },
   { name: "Leaderboard", href: "/leaderboard" },

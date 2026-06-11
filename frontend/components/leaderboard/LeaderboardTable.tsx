@@ -1,8 +1,57 @@
+const participants = [
+  { rank: 1, name: "Rahul", score: 89 },
+  { rank: 2, name: "Priya", score: 84 },
+  { rank: 3, name: "Aman", score: 81 },
+];
+
 export default function LeaderboardTable() {
   return (
-    <div className="border border-gray-200 bg-white p-4 rounded-xl shadow-sm">
-      <h3 className="text-md font-semibold text-gray-700">🏆 Leaderboard Rankings</h3>
-      <div className="mt-3 text-sm text-gray-500 italic">Table skeleton loading... (Students, Cohorts & Metrics)</div>
-    </div>
+    <table className="w-full bg-slate-900 rounded-xl overflow-hidden">
+
+      <thead>
+
+        <tr>
+
+          <th className="p-4">
+            Rank
+          </th>
+
+          <th>
+            Name
+          </th>
+
+          <th>
+            Score
+          </th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        {participants.map((p) => (
+          <tr
+            key={p.rank}
+            className="border-t border-slate-800"
+          >
+            <td className="p-4">
+              {p.rank}
+            </td>
+
+            <td>
+              {p.name}
+            </td>
+
+            <td>
+              {p.score}
+            </td>
+
+          </tr>
+        ))}
+
+      </tbody>
+
+    </table>
   );
 }
