@@ -1,4 +1,5 @@
 import DeleteEventButton from "@/components/events/DeleteEventButton";
+import EditEventButton from "@/components/events/EditEventButton";
 import { supabase } from "@/lib/supabase";
 
 export default async function EventDetailsPage({
@@ -24,7 +25,6 @@ export default async function EventDetailsPage({
 
   return (
     <div className="p-8">
-
       <h1 className="text-3xl font-bold">
         {event.title}
       </h1>
@@ -39,12 +39,15 @@ export default async function EventDetailsPage({
         </p>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6 flex gap-4">
+        <EditEventButton
+          id={event.id}
+        />
+
         <DeleteEventButton
           id={event.id}
         />
       </div>
-
     </div>
   );
 }
