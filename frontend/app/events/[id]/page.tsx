@@ -1,3 +1,4 @@
+import DeleteEventButton from "@/components/events/DeleteEventButton";
 import { supabase } from "@/lib/supabase";
 
 export default async function EventDetailsPage({
@@ -36,6 +37,12 @@ export default async function EventDetailsPage({
         <p>
           Mode: {event.mode}
         </p>
+      </div>
+
+      <div className="mt-6">
+        <DeleteEventButton
+          id={event.id}
+        />
       </div>
 
     </div>
