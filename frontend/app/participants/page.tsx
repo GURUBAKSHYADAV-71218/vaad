@@ -1,6 +1,13 @@
 import ParticipantCard from "@/components/participants/ParticipantCard";
 import AddParticipantForm from "@/components/participants/AddParticipantForm";
-export default function ParticipantsPage() {
+
+import { getParticipants } from "@/lib/participants";
+
+export default async function ParticipantsPage() {
+
+  const participants =
+    await getParticipants();
+
   return (
     <div>
 
@@ -10,19 +17,18 @@ export default function ParticipantsPage() {
 
       <div className="grid grid-cols-3 gap-6">
 
-        <ParticipantCard
-          name="Rahul"
-          role="Participant"
-        />
-
-        <ParticipantCard
-          name="Priya"
-          role="Participant"
-        />
+        {participants.map((participant: any) => (
+          <ParticipantCard
+            key={participant.id}
+            name={participant.name}
+            role={participant.role}
+          />
+        ))}
 
       </div>
-<AddParticipantForm />
+
+      <AddParticipantForm />
+
     </div>
-    
   );
 }
